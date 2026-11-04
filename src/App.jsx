@@ -226,7 +226,7 @@ export default function App() {
       <header className="text-center mb-4 pb-2 border-bottom">
         <h2 className="fw-bold mb-1">Juego de Naipe Inglés</h2>
         <p className="text-muted mb-1">
-          Certamen 2 - Desarrollo Web Utilizando React &bull; <strong>Baeza & Montecino</strong>
+          Certamen 2 - Desarrollo Web Utilizando React &bull; <strong>Baeza y Montecino</strong>
         </p>
         <span className="badge bg-primary">Jugada: 1 Trío y 2 Escalas (11 cartas)</span>
       </header>
@@ -396,49 +396,6 @@ export default function App() {
             )}
 
             <p className="lead fs-6 mb-3 text-secondary">{resultado.reason}</p>
-
-            {resultado.isValid && resultado.details && (
-              <div className="row text-start mt-3 pt-3 border-top g-2">
-                <div className="col-md-4">
-                  <div className="p-2 border rounded bg-light">
-                    <strong>Trío:</strong>
-                    <div className="mt-1">
-                      {resultado.details.trio.map((c, i) => (
-                        <span key={i} className="badge bg-warning text-dark me-1">
-                          {c.isJoker ? 'JOKER 🃏' : `${getCardLabel(c.valor)}${SUIT_SYMBOLS[c.pinta]}`}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-md-4">
-                  <div className="p-2 border rounded bg-light">
-                    <strong>Escala 1:</strong>
-                    <div className="mt-1">
-                      {resultado.details.escala1.map((c, i) => (
-                        <span key={i} className="badge bg-primary me-1">
-                          {c.isJoker ? 'JOKER 🃏' : `${getCardLabel(c.valor)}${SUIT_SYMBOLS[c.pinta]}`}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-md-4">
-                  <div className="p-2 border rounded bg-light">
-                    <strong>Escala 2:</strong>
-                    <div className="mt-1">
-                      {resultado.details.escala2.map((c, i) => (
-                        <span key={i} className="badge bg-info text-dark me-1">
-                          {c.isJoker ? 'JOKER 🃏' : `${getCardLabel(c.valor)}${SUIT_SYMBOLS[c.pinta]}`}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
 
             {mensajeFirebase && (
               <div className="alert alert-success py-2 mt-3 mb-0 small">

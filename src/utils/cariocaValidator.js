@@ -203,7 +203,6 @@ export function validateNaipeInglesHand(cards) {
 
           return {
             isValid: true,
-            reason: '¡Jugada válida! Se reconocieron 1 Trío y 2 Escalas sin compartir cartas.',
             details: {
               trio: trioCards,
               escala1: escala1Cards,

@@ -11,12 +11,12 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY || "AIzaSyCOKme8cxfxLWyBv5FnWv1sf8CzHNfIT7A",
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || "naipe-ingles-60138.firebaseapp.com",
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || "naipe-ingles-60138",
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || "naipe-ingles-60138.firebasestorage.app",
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || "1050404811412",
-  appId: process.env.REACT_APP_FIREBASE_APP_ID || "1:1050404811412:web:64deb8db2986283bb8fa81"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY || "",
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || "",
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || "",
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || "",
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || "",
+  appId: process.env.REACT_APP_FIREBASE_APP_ID || ""
 };
 
 // Verifica si se proporcionaron las claves en el archivo .env
@@ -71,7 +71,7 @@ export async function saveJugadaCarioca(cards, validationDetails) {
         success: true,
         id: docRef.id,
         isFirebase: true,
-        message: "Guardado exitosamente en la colección 'jugadascarioca' de Firebase."
+        message: "Juego guardado exitosamente."
       };
     } catch (error) {
       console.error("Error al guardar en Firestore:", error);
