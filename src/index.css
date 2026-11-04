@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  background-color: #f4f6f9;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #333;
+}
+
+/* Tablero de cartas */
+.mesa-juego {
+  background-color: #1e5631;
+  border: 4px solid #143e23;
+  border-radius: 12px;
+  min-height: 250px;
+  padding: 20px;
+}
+
+/* Carta individual */
+.carta-item {
+  position: relative;
+  width: 110px;
+  height: 155px;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+}
+
+.carta-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Botón X para descartar */
+.btn-descartar {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-descartar:hover {
+  background-color: #bb2d3b;
+}
+
+/* Badge de trío o escala */
+.badge-jugada {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
